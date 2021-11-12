@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/enfermedades-listado.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/funciones.js"></script>
+</head>
+
+<body>
+    <header class="secondary-bg-color">
+        <div id="header-container">
+            <div>
+                <img class="logo-img" src="img/logo.png" alt="isologo">
+                <img class="logo-text" src="img/logotipo.svg" alt="logotipo">
+            </div>
+            <div id="header-searchbar">
+                <form id="header-search-form" action="#" method="get" enctype="application/x-www-form-urlencoded">
+                    <input id="header-search-bar" name="header-search-bar" class="form-input search-bar" type="text" placeholder="Buscar">
+                </form>
+            </div>
+        </div>
+        <div class="primary-bg-color">
+            <nav class="menu primary-bg-color">
+                <ul>
+                    <li>
+                        <a href="index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a class="active" href="enfermedades-listado.html">ENFERMEDADES</a>
+                    </li>
+                    <li>
+                        <a href="mapa-hospitales.html">HOSPITALES</a>
+                    </li>
+                    <li>
+                        <a href="formulario-contacto.html">CONTACTO</a>
+                    </li>
+                </ul>
+            </nav>
+            <a class="desplegable primary-bg-color"></a>
+            <a class="btn-search secondary-bg-color"></a>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>ENFERMEDADES</h2>
+            <form id="search-container" action="#" method="get" enctype="application/x-www-form-urlencoded">
+                <input id="sickness-search-bar" name="sickness-search-bar" type="text" class="form-input search-bar" placeholder="Filtrar por enfermedad">
+            </form>
+            <div id="sickness-container">
+                <article>
+                    <div class="sickness-wrapper">
+                        <div class="sickness-box">
+                            <h3 class="sickness-title sickness-box-title u-case">CORONAVIRUS</h3>
+                        </div>
+                        <div class="sickness-box sickness-box-img">
+                            <img class="rounded-img" src="img/sickness.jpg" alt="Coronavirus">
+                        </div>
+                        <div class="sickness-box sickness-box-text">
+                            <p>Los coronavirus son una extensa familia de virus, algunos de los cuales puede ser causa de
+                                diversas
+                                enfermedades humanas, que van desde el resfriado común hasta el SRAS (síndrome respiratorio
+                                agudo
+                                severo).</p>
+                        </div>
+                        <div class="sickness-box sickness-box-btn">
+                            <a class="btn btn-view-detail alt-bg-color l-case" href="enfermedad-detalle.html">Ver
+                                detalle</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="sickness-wrapper">
+                        <div class="sickness-box">
+                            <h3 class="sickness-title sickness-box-title u-case">Dengue</h3>
+                        </div>
+                        <div class="sickness-box sickness-box-img">
+                            <img class="rounded-img" src="img/sickness.jpg" alt="Dengue">
+                        </div>
+                        <div class="sickness-box sickness-box-text">
+                            <p>El dengue es una enfermedad vírica transmitida por mosquitos que se ha propagado rápidamente en
+                                todas las regiones de la OMS en los últimos años. El virus del dengue se transmite por mosquitos
+                                hembra principalmente de la especie Aedes aegypti y, en menor grado, de A. albopictus.</p>
+                        </div>
+                        <div class="sickness-box sickness-box-btn"><a class="btn btn-view-detail alt-bg-color l-case" href="enfermedad-detalle.html">Ver
+                                detalle</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="sickness-wrapper">
+                        <div class="sickness-box">
+                            <h3 class="sickness-title sickness-box-title u-case">Gripe A</h3>
+                        </div>
+                        <div class="sickness-box sickness-box-img">
+                            <img class="rounded-img" src="img/sickness.jpg" alt="Gripe A">
+                        </div>
+                        <div class="sickness-box sickness-box-text">
+                            <p>Hay tres tipos de virus de la gripe: A, B y C. Los virus gripales de tipo A infectan a los
+                                humanos y animales muy diferentes. Los virus gripales de tipo B solo circulan entre las personas
+                                y causan las epidemias estacionales. Los virus gripales de tipo C pueden infectar tanto a las
+                                personas como a los porcinos, pero la infección suele ser leve y por lo general no se notifica.
+                            </p>
+                        </div>
+                        <div class="sickness-box sickness-box-btn"><a class="btn btn-view-detail alt-bg-color l-case" href="enfermedad-detalle.html">Ver
+                                detalle</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="secondary-bg-color">
+        <div class="footer-container">
+            <div>
+                <h4>DATOS DEL GRUPO</h4>
+                <p>Elian Rodriguez</p>
+                <p>Nicolas Villafañe</p>
+            </div>
+            <div>
+                <h4>MENU INFERIOR</h4>
+                <p><a href="enfermedades-listado.html">Enfermedades</a></p>
+                <p><a href="index.html">Vacunas</a></p>
+                <p><a href="mapa-hospitales.html">Hospitales</a></p>
+                <p><a href="formulario-contacto.html">Contacto</a></p>
+            </div>
+            <div>
+                <h4>REDES SOCIALES</h4>
+                <i class="fa fa-twitter-square"></i> <i class="fa fa-facebook-square"></i> <i class="fa fa-google-plus-square"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

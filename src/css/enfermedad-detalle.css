@@ -1,0 +1,145 @@
+.contenedor-corona-elemento {
+    width: calc(100% - 20px);
+    margin: 10px;
+}
+
+
+.contenedor-corona-elemento img {
+    width: 100%;
+}
+
+.contenedor-sintomas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/*Sintomas*/
+.img-sintomas {
+    width: 45%;
+    margin: 10px;
+}
+
+
+
+.flex-form input[type=radio] {
+    margin: 0.5em 0.6em 0px 0.4em;
+}
+
+.indica-sintomas {
+    font-weight: bolder;
+    margin-top: 10px;
+}
+
+
+/*Metodos de Precaucion*/
+.contenedor-precaucion {
+    margin: 0% 10%;
+}
+
+.contenedor-precaucion img {
+    width: 40%;
+    margin: 10px;
+    box-shadow: 0px 0px 8px #777;
+    padding: 0px 0px 5px 5px;
+}
+
+
+/*Hospital mas cercano*/
+.datos-hosp {
+    width: 100%;
+}
+
+.datos-hosp img {
+    max-width: 100%;
+}
+
+.datos-hosp h3 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.maps-cerca {
+    width: 100%;
+    height: 20em;
+}
+
+.maps-cerca iframe {
+    width: 100%;
+    height: 20em;
+}
+
+
+.contenedor-precaucion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contenedor-hcercano {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: calc(100% - 3em);
+}
+
+
+.contenedor-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.contenedor-deteccion {
+    width: calc(100% - 12m);
+    padding: 1em;
+}
+
+#country-container {
+    display: none;
+}
+
+#address-container {
+    display: none;
+}
+
+/*--------*/
+/*Tamaño pantalla escritorio*/
+@media (min-width: 49em) {
+    .contenedor-corona-elemento {
+        width: calc(50% - 20px);
+    }
+
+    .contenedor-deteccion {
+        width: calc(50% - 2em);
+    }
+
+    .img-sintomas {
+        width: 45%;
+    }
+
+    .contenedor-precaucion img {
+        width: 22%;
+    }
+
+
+    .contenedor-hcercano div {
+        width: 40%;
+    }
+
+    .datos-hosp img {
+        width: 40%;
+        margin: 10px;
+    }
+
+    .datos-hosp h3 {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .maps-cerca {
+        width: 110%;
+        height: 80%;
+    }
+
+}

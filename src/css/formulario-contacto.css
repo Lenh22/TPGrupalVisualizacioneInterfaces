@@ -1,0 +1,98 @@
+.contact-form-column {
+    padding: 12px 20px;
+    transition: 1s;
+}
+
+.contact-form-column.form {
+    background-color: whitesmoke;
+    border-radius: 2.5%;
+    box-shadow: 0px 0px 8px #0a6e68;
+}
+
+.contact-form-column.sobreNosotros p {
+    margin: 40px 20px;
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.form ul {
+    width: 100%;
+    list-style: none;
+}
+
+.form li {
+    margin-bottom: 0.625em;
+}
+
+.form input[type=text],
+textarea,
+input[type=mail],
+input[type=tel] {
+    border-radius: 4px;
+    border-color: #0a6e68;
+    width: calc(100% - 1.25em);
+    border-width: 1px;
+    background-color: gainsboro;
+    padding: 0.5em;
+}
+
+.error {
+    display: none;
+    position: relative;
+    top: -1.3em;
+    right: 0.5em;
+    color: red;
+    float: right;
+    font-size: small;
+}
+
+.quedan {
+    float: right;
+    transition: 1s;
+    font-size: small;
+    color: #0a6e68;
+}
+
+
+.errorstyle {
+    box-shadow: 0px 0px -3px red !important;
+}
+
+/*Tamaño pantalla normal*/
+@media screen and (min-width:47em) {
+    .contact-form-column {
+        width: calc(45% - 40px);
+    }
+
+    .form ul {
+        width: 100%;
+    }
+
+    #contact-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .error {
+        display: none;
+        position: relative;
+        top: -1.3em;
+        right: 0.5em;
+        color: red;
+        float: right;
+        font-size: small;
+    }
+
+    .errorstyle {
+
+        box-shadow: 0px 0px 5px red !important;
+    }
+
+    .quedan {
+        float: right;
+        transition: 1s;
+        font-size: small;
+        color: #0a6e68;
+    }
+}

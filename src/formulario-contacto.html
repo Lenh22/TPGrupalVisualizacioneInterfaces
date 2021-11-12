@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Contacto</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/formulario-contacto.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/funciones.js"></script>
+    <script src="js/formulario-contacto.js"></script>
+</head>
+
+<body>
+    <header class="secondary-bg-color">
+        <div id="header-container">
+            <div>
+                <img class="logo-img" src="img/logo.png" alt="isologo">
+                <img class="logo-text" src="img/logotipo.svg" alt="logotipo">
+            </div>
+            <div id="header-searchbar">
+                <form id="header-search-form" action="#" method="get" enctype="application/x-www-form-urlencoded">
+                    <input id="header-search-bar" name="header-search-bar" class="form-input search-bar" type="text" placeholder="Buscar">
+                </form>
+            </div>
+        </div>
+        <div class="primary-bg-color">
+            <nav class="menu primary-bg-color">
+                <ul>
+                    <li>
+                        <a href="index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="enfermedades-listado.html">ENFERMEDADES</a>
+                    </li>
+                    <li>
+                        <a href="mapa-hospitales.html">HOSPITALES</a>
+                    </li>
+                    <li>
+                        <a class="active" href="formulario-contacto.html">CONTACTO</a>
+                    </li>
+                </ul>
+            </nav>
+            <a class="desplegable primary-bg-color"></a>
+            <a class="btn-search secondary-bg-color"></a>
+        </div>
+    </header>
+    <main id="contact-container">
+        <section id="contact-section">
+            <article class="contact-form-column form">
+                <h2>Contacto</h2>
+                <form id="contact-form" action="#" enctype="application/x-www-form-urlencoded" method="" onsubmit="return validation()">
+                    <ul>
+                        <li>
+                            <label for="contacto-nombre">Nombre:</label>
+                            <input type="text" id="contacto-nombre" name="contacto-nombre">
+                            <p class="error errorcontacto-nombre"></p>
+                        </li>
+                        <li>
+                            <label for="contacto-apellido">Apellido:</label>
+                            <input type="text" id="contacto-apellido" name="contacto-apellido">
+                            <p class="error errorcontacto-apellido"></p>
+                        </li>
+                        <li>
+                            <label for="contacto-mail">Mail:</label>
+                            <input type="mail" id="contacto-mail" name="contacto-mail">
+                            <p class="error errorcontacto-mail"></p>
+                        </li>
+                        <li>
+                            <label for="contacto-tel">Tel:</label>
+                            <input type="tel" id="contacto-tel" name="contacto-tel">
+                            <p class="error errorcontacto-tel"></p>
+                        </li>
+                        <li>
+                            <label for="contacto-consulta">Consulta:</label>
+                            <textarea name="contacto-consulta" id="contacto-consulta" cols="30" rows="10" onkeyup="return countThose()" maxlength="1000"></textarea>
+                            <span class="quedan"></span>
+                        </li>
+                        <li>
+                            <input type="submit" name="enviarcontacto" id="enviarcontacto" class="btn btn-view-detail alt-bg-color l-case">
+                        </li>
+                    </ul>
+                </form>
+            </article>
+            <article class="contact-form-column sobreNosotros">
+                <h2>Sobre Nosotros</h2>
+                <p class="nosotros1">Direccion: Humberto 1º 2532</p>
+                <p class="nosotros2">Telefonos: 434-6487</p>
+                <p class="nosotros3">Celular: 15-6531753</p>
+                <p class="nosotros4">Email: Contacto@esbiev.com.ar</p>
+            </article>
+        </section>
+        <section class="map">
+            <h2>Ubicacion</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.2844309587604!2d-58.403178185185155!3d-34.62225186598509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccae2106bf791%3A0xd8b0da6c4bedc781!2sHumberto%201%C2%BA%202501-2599%2C%20C1229AAO%20CABA!5e0!3m2!1ses-419!2sar!4v1589412382028!5m2!1ses-419!2sar"></iframe>
+        </section>
+    </main>
+    <footer class="secondary-bg-color">
+        <div class="footer-container">
+            <div>
+                <h4>DATOS DEL GRUPO</h4>
+                <p>Elian Rodriguez</p>
+                <p>Nicolas Villafañe</p>
+            </div>
+            <div>
+                <h4>MENU INFERIOR</h4>
+                <p><a href="enfermedades-listado.html">Enfermedades</a></p>
+                <p><a href="index.html">Vacunas</a></p>
+                <p><a href="mapa-hospitales.html">Hospitales</a></p>
+                <p><a href="formulario-contacto.html">Contacto</a></p>
+            </div>
+            <div>
+                <h4>REDES SOCIALES</h4>
+                <i class="fa fa-twitter-square"></i> <i class="fa fa-facebook-square"></i> <i class="fa fa-google-plus-square"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
