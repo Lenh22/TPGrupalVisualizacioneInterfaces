@@ -10,25 +10,7 @@
 
 
 <!------------------Links de Gustavo-------------------->
-<!---		<link rel="stylesheet" href="css/formStyles.css" />
-		<link
-		rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-		integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
-		crossorigin="anonymous"
-		/>
-		<script
-		src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-		crossorigin="anonymous"
-		></script>
-		<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
-		crossorigin="anonymous"
-		></script>
 
-<!------------------------------------------------------->
         <!--font-family-->
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
 		
@@ -752,676 +734,377 @@
 						<div class="row">
 <!--------------------------------form de Gusta------------------------------------------------------------------------->
 							
-<h2>Test</h2>
+<div class="contenedor-deteccion">
+                        <form class="contenedor-formulario" id="detection-form" name="detection-form" action="#" enctype="application/x-www-form-urlencoded" method="POST" onsubmit="return validate()">
+                            <div class="form-row">
+                                <div class="form-col col-100">
+                                    <label for="nombreapellido">Nombre y Apellido:</label>
+                                    <input class="form-input" type="text" id="nombreapellido" name="nombreapellido">
+                                    <div class="error-message">Campo Obligatorio</div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-col col-50">
+                                    <label for="dni">DNI</label>
+                                    <input class="form-input" type="text" id="dni" name="dni">
+                                    <div class="error-message">Campo Obligatorio</div>
+                                </div>
+                                <div class="form-col col-50">
+                                    <label for="telefono">Telefono</label>
+                                    <input class="form-input" type="tel" id="telefono" name="telefono">
+                                    <div class="error-message">Campo Obligatorio</div>
+                                </div>
+                            </div>
 
-    <div class="jumbotron" id="jumbotron">
-      <h1 class="display-4">Hola, bienvenido</h1>
-      <p class="lead">
-        ¿Quiéres completar el test para evaluar si existe la posibilidad de que
-        seas un caso sospechoso de covid?
-      </p>
-      <hr class="my-4" />
-      <p>
-        En caso de que así sea, haz click en el botón aquí debajo y completalo a
-        conciencia.
-      </p>
-      <a class="btn btn-primary btn-lg" href="#formUsuario" role="button" onclick="muestra_oculta('jumbotron')">Empecemos</a>
-    </div>
-
-    <div class="container">
-      <!-- Button trigger modal -->
-      <button
-        type="button"
-        class="btn btn-primary"
-        data-toggle="modal"
-        data-target="#staticBackdrop"
-      >
-        Launch static backdrop modal
-      </button>
-
-      <!-- Modal -->
-      <div
-        class="modal fade"
-        id="staticBackdrop"
-        data-backdrop="static"
-        data-keyboard="false"
-        tabindex="-1"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">...</div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-dismiss="modal"
-              >
-                Understood
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br />
-      <!--Fin modal-->
-
-      <div class="row">
-        <div class="col">
-
-          <br />
-          <h3>Acá irán los formularios</h3>
-          <br />
-
-          <div id="esconderFormUsuario">
-          <form class="needs-validation formUsuario" id="formUsuario" novalidate>
-            <div class="form-row">
-              <div class="col-md-6 mb-3">
-                <label for="validationCustom01">Nombre</label>
-                <input
-                  type="text"
-                  name="nombre _replyto"
-                  class="form-control"
-                  id="validationCustom01 nombre"
-                  placeholder="Ingrese su nombre..."
-                  minlength="3"
-                  maxlength="40"
-                  required
-                />
-                <div class="valid-feedback">Looks good!</div>
-                <div class="invalid-feedback">Ingrese su nombre.</div>
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="validationCustom02">Apellido</label>
-                <input
-                  type="text"
-                  name="apellido"
-                  class="form-control"
-                  id="validationCustom02"
-                  placeholder="Ingrese su apellido..."
-                  minlength="2"
-                  maxlength="50"
-                  required
-                />
-                <div class="valid-feedback">Looks good!</div>
-                <div class="invalid-feedback">Ingrese su apellido.</div>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="col-md-6 mb-3">
-                <label for="validationCustom03">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  class="form-control"
-                  id="validationCustom03"
-                  placeholder="ejemplo@email.com"
-                  required
-                />
-                <div class="invalid-feedback">
-                  Please provide a valid Email.
-                </div>
-              </div>
-              <div class="col-md-3 mb-3">
-                <label for="validationCustom04">Provincia</label>
-                <select class="custom-select" id="validationCustom04" required>
-                  <option selected disabled value="">Choose...</option>
-                  <option value="Buenos Aires">Buenos Aires</option>
-                  <option value="CABA">CABA</option>
-                  <option value="Catamarca">Catamarca</option>
-                  <option value="Chaco">Chaco</option>
-                  <option value="Chubut">Chubut</option>
-                  <option value="Córdoba">Córdoba</option>
-                  <option value="Corrientes">Corrientes</option>
-                  <option value="Entre Ríos">Entre Ríos</option>
-                  <option value="Formosa">Formosa</option>
-                  <option value="Jujuy">Jujuy</option>
-                  <option value="La Pampa">La Pampa</option>
-                  <option value="La Rioja">La Rioja</option>
-                  <option value="Mendoza">Mendoza</option>
-                  <option value="Misiones">Misiones</option>
-                  <option value="Neuquén">Neuquén</option>
-                  <option value="Río Negro">Río Negro</option>
-                  <option value="Salta">Salta</option>
-                  <option value="San Juan">San Juan</option>
-                  <option value="San Luis">San Luis</option>
-                  <option value="Santa Cruz">Santa Cruz</option>
-                  <option value="Santa Fe">Santa Fe</option>
-                  <option value="Santiago del Estero">
-                    Santiago del Estero
-                  </option>
-                  <option value="Tierra del Fuego">Tierra del Fuego</option>
-                  <option value="Tucuman">Tucumán</option>
-                </select>
-                <div class="invalid-feedback">
-                  Please select a valid Provincia.
-                </div>
-              </div>
-              <div class="col-md-3 mb-3">
-                <label for="validationCustom05">Género</label>
-                <select class="form-control" id="validationCustom05" required>
-                  <option selected disabled value="">Choose...</option>
-                  <option value="Femenino">Femenino</option>
-                  <option value="Masculino">Masculino</option>
-                  <option value="Ambos">Ambos</option>
-                  <option value="No Binario">No Binario</option>
-                  <option value="Otro">Otro</option>
-                  <option value="Ninguno">Ninguno</option>
-                </select>
-                <div class="invalid-feedback">
-                  Please provide a valid Gender.
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="invalidCheck"
-                  required
-                />
-                <label class="form-check-label" for="invalidCheck">
-                  Agree to terms and conditions
-                </label>
-                <div class="invalid-feedback">
-                  You must agree before submitting.
-                </div>
-              </div>
-            </div>
-            <button class="btn btn-primary" type="submit" onclick="verificarYocultarForm('formUsuario')" >Enviar</button>
-          </form>
-        </div>
-
-          <script>
-            // Example starter JavaScript for disabling form submissions if there are invalid fields
-            (function () {
-              "use strict";
-              window.addEventListener(
-                "load",
-                function () {
-                  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                  var forms =
-                    document.getElementsByClassName("needs-validation");
-                  // Loop over them and prevent submission
-                  var validation = Array.prototype.filter.call(
-                    forms,
-                    function (form) {
-                      form.addEventListener(
-                        "submit",
-                        function (event) {
-                          if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                          }
-                          form.classList.add("was-validated");
-                        },
-                        false
-                      );
-                    }
-                  );
-                },
-                false
-              );
-            })();
-          </script>
-          
-          <br />
-
-          <br />
-          <h3>Test De Covid</h3>
-          <br />
-
-          <div class="progress">
-            <div
-              id="progressBar"
-              class="progress-bar progress-bar-striped progress-bar-animated"
-              role="progressbar"
-              aria-valuenow="75"
-              aria-valuemin="0"
-              aria-valuemax="100"
-              style="width: 9%"
-            ></div>
-          </div>
-          <br />
-
-          <!--Barra de progreso del form-->
-
-          <form id="formCovid">
-
-            <div class="card" id="card1" style= "display: block;">
-            
-              <div class="card-body">
-                <label for="" class="card-title"
-                  >¿ Percibiste una marcada pérdida del olfato ?</label
-                >
-                <div class="custom-control custom-radio">
-                  <input
-                    type="radio"
-                    id="customRadio1"
-                    name="customRadio1"
-                    class="custom-control-input"
-                  />
-                  <label class="custom-control-label" for="customRadio1"
-                    >Si</label
-                  >
-                </div>
-                <div class="custom-control custom-radio">
-                  <input
-                    type="radio"
-                    id="customRadio2"
-                    name="customRadio1"
-                    class="custom-control-input"
-                  />
-                  <label class="custom-control-label" for="customRadio2"
-                    >No</label
-                  >
-                </div>
-                <br />
-                <a href="#" class="card-link siguiente" onclick="muestra_oculta('card1')"
-                title="">Siguiente</a>
-              </div>
-            </div>
-
-            <br />
-
-            <div class="card" id="card2" >
-              <div class="card-body">
-                <label for="" class="card-title"
-                  >¿ Percibiste una marcada pérdida del gusto ?</label
-                >
-                <div class="custom-control custom-radio">
-                  <input
-                    type="radio"
-                    id="customRadio3"
-                    name="customRadio2"
-                    class="custom-control-input"
-                  />
-                  <label class="custom-control-label" for="customRadio3"
-                    >Si</label
-                  >
-                </div>
-                <div class="custom-control custom-radio">
-                  <input
-                    type="radio"
-                    id="customRadio4"
-                    name="customRadio2"
-                    class="custom-control-input"
-                  />
-                  <label class="custom-control-label" for="customRadio4"
-                    >No</label
-                  >
-                </div>
-                <br />
-                <a href="#" class="card-link anterior" onclick="muestra_oculta('card1')"
-                title="">Anterior</a>
-                <a href="#" class="card-link siguiente" onclick="muestra_oculta('card2')"
-                title="">Siguiente</a>
-              </div>
-            </div>
-
-            <br />
-
-            <div class="card" id="card3" >
-              <div class="card-body">
-                <label for="" class="card-title">¿ Tenés fiebre ?</label>
-                <div class="custom-control custom-radio">
-                  <input
-                    type="radio"
-                    id="customRadio5"
-                    name="customRadio3"
-                    class="custom-control-input"
-                  />
-                  <label class="custom-control-label" for="customRadio5"
-                    >Si</label
-                  >
-                </div>
-                <div class="custom-control custom-radio">
-                  <input
-                    type="radio"
-                    id="customRadio6"
-                    name="customRadio3"
-                    class="custom-control-input"
-                  />
-                  <label class="custom-control-label" for="customRadio6"
-                    >No</label
-                  >
-                </div>
-                <br />
-                <a href="#" class="card-link anterior" onclick="muestra_oculta('card2')"
-                title="">Anterior</a>
-                <a href="#" class="card-link siguiente" onclick="muestra_oculta('card3')"
-                title="">Siguiente</a>
-              </div>
-            </div>
-
-            <br />
-
-            <div class="card" id="card4" >
-              <div class="card-body">
-                <label for="" class="card-title">¿ Tenés tos ?</label>
-                <div class="custom-control custom-radio">
-                  <input
-                    type="radio"
-                    id="customRadio7"
-                    name="customRadio4"
-                    class="custom-control-input"
-                  />
-                  <label class="custom-control-label" for="customRadio7"
-                    >Si</label
-                  >
-                </div>
-                <div class="custom-control custom-radio">
-                  <input
-                    type="radio"
-                    id="customRadio8"
-                    name="customRadio4"
-                    class="custom-control-input"
-                  />
-                  <label class="custom-control-label" for="customRadio8"
-                    >No</label
-                  >
-                </div>
-                <br />
-                <a href="#" class="card-link anterior" onclick="muestra_oculta('card3')"
-                title="">Anterior</a>
-                <a href="#" class="card-link siguiente" onclick="muestra_oculta('card4')"
-                title="">Siguiente</a>
-              </div>
-            </div>
-
-            <br />
-
-            <div class="card" id="card5" >
-              <div class="card-body">
-                <label for="" class="card-title"
-                  >¿ Tenés dolor de garganta ?</label
-                >
-                <div class="custom-control custom-radio">
-                  <input
-                    type="radio"
-                    id="customRadio9"
-                    name="customRadio5"
-                    class="custom-control-input"
-                  />
-                  <label class="custom-control-label" for="customRadio9"
-                    >Si</label
-                  >
-                </div>
-                <div class="custom-control custom-radio">
-                  <input
-                    type="radio"
-                    id="customRadio10"
-                    name="customRadio5"
-                    class="custom-control-input"
-                  />
-                  <label class="custom-control-label" for="customRadio10"
-                    >No</label
-                  >
-                </div>
-                <br />
-                <a href="#" class="card-link anterior" onclick="muestra_oculta('card4')"
-                title="">Anterior</a>
-                <a href="#" class="card-link siguiente" onclick="muestra_oculta('card5')"
-                title="">Siguiente</a>
-              </div>
-            </div>
-
-            <br />
-
-            <div class="card" id="card6" >
-              <div class="card-body">
-                <label for="" class="card-title"
-                  >¿ Tenés dificultad para respirar ?</label
-                >
-                <div class="custom-control custom-radio">
-                  <input
-                    type="radio"
-                    id="customRadio11"
-                    name="customRadio6"
-                    class="custom-control-input"
-                  />
-                  <label class="custom-control-label" for="customRadio11"
-                    >Si</label
-                  >
-                </div>
-                <div class="custom-control custom-radio">
-                  <input
-                    type="radio"
-                    id="customRadio12"
-                    name="customRadio6"
-                    class="custom-control-input"
-                  />
-                  <label class="custom-control-label" for="customRadio12"
-                    >No</label
-                  >
-                </div>
-                <br />
-                <a href="#" class="card-link anterior" onclick="muestra_oculta('card5')"
-                title="">Anterior</a>
-                <a href="#" class="card-link siguiente" onclick="muestra_oculta('card6')"
-                title="">Siguiente</a>
-              </div>
-            </div>
-
-            <br />
-
-            <div class="card" id="card7" >
-              <div class="card-body">
-                <label for="" class="card-title">¿ Tenés diarrea ?</label>
-                <div class="custom-control custom-radio">
-                  <input
-                    type="radio"
-                    id="customRadio13"
-                    name="customRadio7"
-                    class="custom-control-input"
-                  />
-                  <label class="custom-control-label" for="customRadio13"
-                    >Si</label
-                  >
-                </div>
-                <div class="custom-control custom-radio">
-                  <input
-                    type="radio"
-                    id="customRadio14"
-                    name="customRadio7"
-                    class="custom-control-input"
-                  />
-                  <label class="custom-control-label" for="customRadio14"
-                    >No</label
-                  >
-                </div>
-                <br />
-                <a href="#" class="card-link" onclick="muestra_oculta('card6')"
-                title="">Anterior</a>
-                <a href="#" class="card-link" onclick="muestra_oculta('card7')"
-                title="">Siguiente</a>
-              </div>
-            </div>
-
-            <br />
-
-            <div class="card" id="card8" >
-              <div class="card-body">
-                <label for="" class="card-title"
-                  >¿ Tenés dolor de cabeza ?</label
-                >
-                <div class="custom-control custom-radio">
-                  <input
-                    type="radio"
-                    id="customRadio15"
-                    name="customRadio8"
-                    class="custom-control-input"
-                  />
-                  <label class="custom-control-label" for="customRadio15"
-                    >Si</label
-                  >
-                </div>
-                <div class="custom-control custom-radio">
-                  <input
-                    type="radio"
-                    id="customRadio16"
-                    name="customRadio8"
-                    class="custom-control-input"
-                  />
-                  <label class="custom-control-label" for="customRadio16"
-                    >No</label
-                  >
-                </div>
-                <br />
-                <a href="#" class="card-link" onclick="muestra_oculta('card7')"
-                title="">Anterior</a>
-                <a href="#" class="card-link" onclick="muestra_oculta('card8')"
-                title="">Siguiente</a>
-              </div>
-            </div>
-
-            <br />
-
-            <div class="card" id="card9" >
-              <div class="card-body">
-                <label for="" class="card-title"
-                  >¿ Tenés dolores musculares y/o articulares ?</label
-                >
-                <div class="custom-control custom-radio">
-                  <input
-                    type="radio"
-                    id="customRadio17"
-                    name="customRadio9"
-                    class="custom-control-input"
-                  />
-                  <label class="custom-control-label" for="customRadio17"
-                    >Si</label
-                  >
-                </div>
-                <div class="custom-control custom-radio">
-                  <input
-                    type="radio"
-                    id="customRadio18"
-                    name="customRadio9"
-                    class="custom-control-input"
-                  />
-                  <label class="custom-control-label" for="customRadio18"
-                    >No</label
-                  >
-                </div>
-                <br />
-                <a href="#" class="card-link" onclick="muestra_oculta('card8')"
-                title="">Anterior</a>
-                <a href="#" class="card-link" onclick="muestra_oculta('card9')"
-                title="">Siguiente</a>
-              </div>
-            </div>
-
-            <br />
-
-            <div class="card" id="card10" >
-              <div class="card-body">
-                <label for="" class="card-title"
-                  >¿ Estuviste en contacto con un caso confirmado o sospechoso
-                  de covid en los últimos 7 días ?</label
-                >
-                <div class="custom-control custom-radio">
-                  <input
-                    type="radio"
-                    id="customRadio19"
-                    name="customRadio10"
-                    class="custom-control-input"
-                  />
-                  <label class="custom-control-label" for="customRadio19"
-                    >Si</label
-                  >
-                </div>
-                <div class="custom-control custom-radio">
-                  <input
-                    type="radio"
-                    id="customRadio20"
-                    name="customRadio10"
-                    class="custom-control-input"
-                  />
-                  <label class="custom-control-label" for="customRadio20"
-                    >No</label
-                  >
-                </div>
-                <br />
-                <a href="#" class="card-link" onclick="muestra_oculta('card9')"
-                title="">Anterior</a>
-                <a href="#" class="card-link" onclick="muestra_oculta('card10')"
-                title="">Siguiente</a>
-              </div>
-            </div>
-
-            <br />
-
-            <div class="card" id="card11" >
-              <div class="card-body">
-                <label for="exampleFormControlSelect1" class="card-title"
-                  >¿ Cuántos días llevás con estos síntomas ?</label
-                >
-                <select
-                  class="form-control card-text"
-                  id="exampleFormControlSelect1"
-                  required
-                >
-                  <option value="Desde hoy">Desde hoy</option>
-                  <option value="Desde ayer">Desde ayer</option>
-                  <option value="Empezaron hace 2 dias">Empezaron hace 2 días</option>
-                  <option value="Empezaron hace 3 dias">Empezaron hace 3 días</option>
-                  <option value="Mas de 2 dias">Más de 3 días</option>
-                </select>
-                <br />
-                <a href="#" class="card-link" onclick="muestra_oculta('card10')"
-                title=""
-                >Anterior</a>
-              </div>
-            </div>
-
-            <br />
-
-            <button type="submit" class="btn btn-primary formCov" onclick="processData()" href="#">Enviar</button>
-
-            <script>
-              // Variable to hold request
-              var data = [];
-              $("#dataForm").submit(function(event) {
-                  event.preventDefault();
-                  data.push($(this).find('input[name="data"]').val());
-                  var a = [];
-                  a = document.getElementById("#card11").value; 
-                  alert("Dato Añadida");
-              });
-          
-              function processData() {
-                  alert(a);
-              }
-          </script>
-
-            <br />
-          </form>
-
-
-          <br />
-        </div>
-
-        <div class="col">
-          <br />
-          <h3>Acá la info y dibujos</h3>
-          <br />
-        </div>
-
+                            <div class="form-row">
+                                <div class="form-col col-50">
+                                    <label for="ciudad">Ciudad</label>
+                                    <input type="text" id="ciudad">
+                                    <div class="error-message">Campo Obligatorio</div>
+                                </div>
+                                <div class="form-col col-50">
+                                    <p>Sexo</p>
+                                    <div class="vertical-align-center">
+                                        <label for="masculino">M</label>
+                                        <input type="radio" id="masculino" name="genero" value="M"><label for="femenino">F</label>
+                                        <input type="radio" id="femenino" name="genero" value="f">
+                                        <div class="error-message">Campo obligatorio</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-col col-2">
+                                    <p>¿viajaste al exterior de la Republica Argentina?</p>
+                                </div>
+                                <div class="form-col col-2">
+                                    <input type="radio" id="viajo-si" name="realizo-viaje" value="si" onclick="showCountries()">
+                                    <label for="viajo-si">Si</label>
+                                    <input type="radio" id="viajo-no" name="realizo-viaje" value="no" onclick="showCountries()">
+                                    <label for="viajo-no">No</label>
+                                </div>
+                            </div>
+                            <div class="form-row" id="country-container">
+                                <div class="form-col col-100">
+                                    <label for="pais">Pais visitados</label>
+                                    <select name="pais" id="pais">
+                                        <option value="">Ingrese el pais que visitó</option>
+                                        <option value="AF">Afganistán</option>
+                                        <option value="AL">Albania</option>
+                                        <option value="DE">Alemania</option>
+                                        <option value="AD">Andorra</option>
+                                        <option value="AO">Angola</option>
+                                        <option value="AI">Anguilla</option>
+                                        <option value="AQ">Antártida</option>
+                                        <option value="AG">Antigua y Barbuda</option>
+                                        <option value="AN">Antillas Holandesas</option>
+                                        <option value="SA">Arabia Saudí</option>
+                                        <option value="DZ">Argelia</option>
+                                        <option value="AR">Argentina</option>
+                                        <option value="AM">Armenia</option>
+                                        <option value="AW">Aruba</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="AT">Austria</option>
+                                        <option value="AZ">Azerbaiyán</option>
+                                        <option value="BS">Bahamas</option>
+                                        <option value="BH">Bahrein</option>
+                                        <option value="BD">Bangladesh</option>
+                                        <option value="BB">Barbados</option>
+                                        <option value="BE">Bélgica</option>
+                                        <option value="BZ">Belice</option>
+                                        <option value="BJ">Benin</option>
+                                        <option value="BM">Bermudas</option>
+                                        <option value="BY">Bielorrusia</option>
+                                        <option value="MM">Birmania</option>
+                                        <option value="BO">Bolivia</option>
+                                        <option value="BA">Bosnia y Herzegovina</option>
+                                        <option value="BW">Botswana</option>
+                                        <option value="BR">Brasil</option>
+                                        <option value="BN">Brunei</option>
+                                        <option value="BG">Bulgaria</option>
+                                        <option value="BF">Burkina Faso</option>
+                                        <option value="BI">Burundi</option>
+                                        <option value="BT">Bután</option>
+                                        <option value="CV">Cabo Verde</option>
+                                        <option value="KH">Camboya</option>
+                                        <option value="CM">Camerún</option>
+                                        <option value="CA">Canadá</option>
+                                        <option value="TD">Chad</option>
+                                        <option value="CL">Chile</option>
+                                        <option value="CN">China</option>
+                                        <option value="CY">Chipre</option>
+                                        <option value="VA">Ciudad del Vaticano (Santa Sede)</option>
+                                        <option value="CO">Colombia</option>
+                                        <option value="KM">Comores</option>
+                                        <option value="CG">Congo</option>
+                                        <option value="CD">Congo, República Democrática del</option>
+                                        <option value="KR">Corea</option>
+                                        <option value="KP">Corea del Norte</option>
+                                        <option value="CI">Costa de Marfíl</option>
+                                        <option value="CR">Costa Rica</option>
+                                        <option value="HR">Croacia (Hrvatska)</option>
+                                        <option value="CU">Cuba</option>
+                                        <option value="DK">Dinamarca</option>
+                                        <option value="DJ">Djibouti</option>
+                                        <option value="DM">Dominica</option>
+                                        <option value="EC">Ecuador</option>
+                                        <option value="EG">Egipto</option>
+                                        <option value="SV">El Salvador</option>
+                                        <option value="AE">Emiratos Árabes Unidos</option>
+                                        <option value="ER">Eritrea</option>
+                                        <option value="SI">Eslovenia</option>
+                                        <option value="ES">España</option>
+                                        <option value="US">Estados Unidos</option>
+                                        <option value="EE">Estonia</option>
+                                        <option value="ET">Etiopía</option>
+                                        <option value="FJ">Fiji</option>
+                                        <option value="PH">Filipinas</option>
+                                        <option value="FI">Finlandia</option>
+                                        <option value="FR">Francia</option>
+                                        <option value="GA">Gabón</option>
+                                        <option value="GM">Gambia</option>
+                                        <option value="GE">Georgia</option>
+                                        <option value="GH">Ghana</option>
+                                        <option value="GI">Gibraltar</option>
+                                        <option value="GD">Granada</option>
+                                        <option value="GR">Grecia</option>
+                                        <option value="GL">Groenlandia</option>
+                                        <option value="GP">Guadalupe</option>
+                                        <option value="GU">Guam</option>
+                                        <option value="GT">Guatemala</option>
+                                        <option value="GY">Guayana</option>
+                                        <option value="GF">Guayana Francesa</option>
+                                        <option value="GN">Guinea</option>
+                                        <option value="GQ">Guinea Ecuatorial</option>
+                                        <option value="GW">Guinea-Bissau</option>
+                                        <option value="HT">Haití</option>
+                                        <option value="HN">Honduras</option>
+                                        <option value="HU">Hungría</option>
+                                        <option value="IN">India</option>
+                                        <option value="ID">Indonesia</option>
+                                        <option value="IQ">Irak</option>
+                                        <option value="IR">Irán</option>
+                                        <option value="IE">Irlanda</option>
+                                        <option value="BV">Isla Bouvet</option>
+                                        <option value="CX">Isla de Christmas</option>
+                                        <option value="IS">Islandia</option>
+                                        <option value="KY">Islas Caimán</option>
+                                        <option value="CK">Islas Cook</option>
+                                        <option value="CC">Islas de Cocos o Keeling</option>
+                                        <option value="FO">Islas Faroe</option>
+                                        <option value="HM">Islas Heard y McDonald</option>
+                                        <option value="FK">Islas Malvinas</option>
+                                        <option value="MP">Islas Marianas del Norte</option>
+                                        <option value="MH">Islas Marshall</option>
+                                        <option value="UM">Islas menores de Estados Unidos</option>
+                                        <option value="PW">Islas Palau</option>
+                                        <option value="SB">Islas Salomón</option>
+                                        <option value="SJ">Islas Svalbard y Jan Mayen</option>
+                                        <option value="TK">Islas Tokelau</option>
+                                        <option value="TC">Islas Turks y Caicos</option>
+                                        <option value="VI">Islas Vírgenes (EEUU)</option>
+                                        <option value="VG">Islas Vírgenes (Reino Unido)</option>
+                                        <option value="WF">Islas Wallis y Futuna</option>
+                                        <option value="IL">Israel</option>
+                                        <option value="IT">Italia</option>
+                                        <option value="JM">Jamaica</option>
+                                        <option value="JP">Japón</option>
+                                        <option value="JO">Jordania</option>
+                                        <option value="KZ">Kazajistán</option>
+                                        <option value="KE">Kenia</option>
+                                        <option value="KG">Kirguizistán</option>
+                                        <option value="KI">Kiribati</option>
+                                        <option value="KW">Kuwait</option>
+                                        <option value="LA">Laos</option>
+                                        <option value="LS">Lesotho</option>
+                                        <option value="LV">Letonia</option>
+                                        <option value="LB">Líbano</option>
+                                        <option value="LR">Liberia</option>
+                                        <option value="LY">Libia</option>
+                                        <option value="LI">Liechtenstein</option>
+                                        <option value="LT">Lituania</option>
+                                        <option value="LU">Luxemburgo</option>
+                                        <option value="MK">Macedonia, Ex-República Yugoslava de</option>
+                                        <option value="MG">Madagascar</option>
+                                        <option value="MY">Malasia</option>
+                                        <option value="MW">Malawi</option>
+                                        <option value="MV">Maldivas</option>
+                                        <option value="ML">Malí</option>
+                                        <option value="MT">Malta</option>
+                                        <option value="MA">Marruecos</option>
+                                        <option value="MQ">Martinica</option>
+                                        <option value="MU">Mauricio</option>
+                                        <option value="MR">Mauritania</option>
+                                        <option value="YT">Mayotte</option>
+                                        <option value="MX">México</option>
+                                        <option value="FM">Micronesia</option>
+                                        <option value="MD">Moldavia</option>
+                                        <option value="MC">Mónaco</option>
+                                        <option value="MN">Mongolia</option>
+                                        <option value="MS">Montserrat</option>
+                                        <option value="MZ">Mozambique</option>
+                                        <option value="NA">Namibia</option>
+                                        <option value="NR">Nauru</option>
+                                        <option value="NP">Nepal</option>
+                                        <option value="NI">Nicaragua</option>
+                                        <option value="NE">Níger</option>
+                                        <option value="NG">Nigeria</option>
+                                        <option value="NU">Niue</option>
+                                        <option value="NF">Norfolk</option>
+                                        <option value="NO">Noruega</option>
+                                        <option value="NC">Nueva Caledonia</option>
+                                        <option value="NZ">Nueva Zelanda</option>
+                                        <option value="OM">Omán</option>
+                                        <option value="NL">Países Bajos</option>
+                                        <option value="PA">Panamá</option>
+                                        <option value="PG">Papúa Nueva Guinea</option>
+                                        <option value="PK">Paquistán</option>
+                                        <option value="PY">Paraguay</option>
+                                        <option value="PE">Perú</option>
+                                        <option value="PN">Pitcairn</option>
+                                        <option value="PF">Polinesia Francesa</option>
+                                        <option value="PL">Polonia</option>
+                                        <option value="PT">Portugal</option>
+                                        <option value="PR">Puerto Rico</option>
+                                        <option value="QA">Qatar</option>
+                                        <option value="UK">Reino Unido</option>
+                                        <option value="CF">República Centroafricana</option>
+                                        <option value="CZ">República Checa</option>
+                                        <option value="ZA">República de Sudáfrica</option>
+                                        <option value="DO">República Dominicana</option>
+                                        <option value="SK">República Eslovaca</option>
+                                        <option value="RE">Reunión</option>
+                                        <option value="RW">Ruanda</option>
+                                        <option value="RO">Rumania</option>
+                                        <option value="RU">Rusia</option>
+                                        <option value="EH">Sahara Occidental</option>
+                                        <option value="KN">Saint Kitts y Nevis</option>
+                                        <option value="WS">Samoa</option>
+                                        <option value="AS">Samoa Americana</option>
+                                        <option value="SM">San Marino</option>
+                                        <option value="VC">San Vicente y Granadinas</option>
+                                        <option value="SH">Santa Helena</option>
+                                        <option value="LC">Santa Lucía</option>
+                                        <option value="ST">Santo Tomé y Príncipe</option>
+                                        <option value="SN">Senegal</option>
+                                        <option value="SC">Seychelles</option>
+                                        <option value="SL">Sierra Leona</option>
+                                        <option value="SG">Singapur</option>
+                                        <option value="SY">Siria</option>
+                                        <option value="SO">Somalia</option>
+                                        <option value="LK">Sri Lanka</option>
+                                        <option value="PM">St Pierre y Miquelon</option>
+                                        <option value="SZ">Suazilandia</option>
+                                        <option value="SD">Sudán</option>
+                                        <option value="SE">Suecia</option>
+                                        <option value="CH">Suiza</option>
+                                        <option value="SR">Surinam</option>
+                                        <option value="TH">Tailandia</option>
+                                        <option value="TW">Taiwán</option>
+                                        <option value="TZ">Tanzania</option>
+                                        <option value="TJ">Tayikistán</option>
+                                        <option value="TF">Territorios franceses del Sur</option>
+                                        <option value="TP">Timor Oriental</option>
+                                        <option value="TG">Togo</option>
+                                        <option value="TO">Tonga</option>
+                                        <option value="TT">Trinidad y Tobago</option>
+                                        <option value="TN">Túnez</option>
+                                        <option value="TM">Turkmenistán</option>
+                                        <option value="TR">Turquía</option>
+                                        <option value="TV">Tuvalu</option>
+                                        <option value="UA">Ucrania</option>
+                                        <option value="UG">Uganda</option>
+                                        <option value="UY">Uruguay</option>
+                                        <option value="UZ">Uzbekistán</option>
+                                        <option value="VU">Vanuatu</option>
+                                        <option value="VE">Venezuela</option>
+                                        <option value="VN">Vietnam</option>
+                                        <option value="YE">Yemen</option>
+                                        <option value="YU">Yugoslavia</option>
+                                        <option value="ZM">Zambia</option>
+                                        <option value="ZW">Zimbabue</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-col col-100">
+                                    <p class="indica-sintomas">Por favor, indica los sintomas que presentas:</p>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-col">
+                                    <p>¿Tuviste Fiebre mayor a 38 grados?</p>
+                                </div>
+                                <div class="form-col">
+                                    <input class="sickness-radio" type="radio" id="fiebre-si" name="fiebre" value="si">
+                                    <label for="fiebre-si">Si</label>
+                                    <input class="sickness-radio" type="radio" id="fiebre-no" name="fiebre" value="no">
+                                    <label for="fiebre-no">No</label>
+                                    <div class="error-message">Campo Obligatorio</div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-col">
+                                    <p>¿Tuviste dolor de cabeza?</p>
+                                </div>
+                                <div class="form-col">
+                                    <input class="sickness-radio" type="radio" id="dcabeza-si" name="dolordecabeza" value="si"><label for="dcabeza-si">Si</label>
+                                    <input class="sickness-radio" type="radio" id="dcabeza-no" name="dolordecabeza" value="no">
+                                    <label for="dcabeza-no">No</label>
+                                    <div class="error-message">Campo Obligatorio</div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-col">
+                                    <p>¿Tuviste una tos persistente?</p>
+                                </div>
+                                <div class="form-col">
+                                    <input class="sickness-radio" type="radio" id="tos-si" name="tos" value="si">
+                                    <label for="tos-si">Si</label>
+                                    <input class="sickness-radio" type="radio" id="tos-no" name="tos" value="no">
+                                    <label for="tos-no">No</label>
+                                    <div class="error-message">Campo Obligatorio</div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-col">
+                                    <p>¿Tuviste dolor de garganta?</p>
+                                </div>
+                                <div class="form-col">
+                                    <input class="sickness-radio" type="radio" id="dgarganta-si" name="dgarganta" value="si"><label for="dgarganta-si">Si</label>
+                                    <input class="sickness-radio" type="radio" id="dgarganta-no" name="dgarganta" value="no">
+                                    <label for="dgarganta-no">No</label>
+                                    <div class="error-message">Campo Obligatorio</div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-col">
+                                    <p>¿Tuviste dificultad para respirar?</p>
+                                </div>
+                                <div class="form-col">
+                                    <input class="sickness-radio" type="radio" id="drespirar-si" name="drespirar" value="si" onclick="showAddress()">
+                                    <label for="drespirar-si">Si</label>
+                                    <input class="sickness-radio" type="radio" id="drespirar-no" name="drespirar" value="no" onclick="showAddress()">
+                                    <label for="drespirar-no">No</label>
+                                    <div class="error-message">Campo Obligatorio</div>
+                                </div>
+                            </div>
+                            <div class="form-row" id="address-container">
+                                <div class="form-col col-100">
+                                    <label for="direccion">Direccion:</label><input type="text" id="direccion" name="direccion">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-col col-100">
+                                    <label for="ciudad">Ciudad</label><input type="text" id="ciudad" name="ciudad">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-col col-100">
+                                    <input type="submit" value="enviar test" class="btn btn-view-detail alt-bg-color l-case">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
       </div>
 
     </div>
@@ -1507,11 +1190,14 @@
         <!--Custom JS-->
         <script type="text/javascript" src="assets/js/jak-menusearch.js"></script>
         <script type="text/javascript" src="assets/js/custom.js"></script>
+
+        <!--Form JS-->
+        <script src="js/enfermedad-detalle.js"></script>
 		
 
     </body>
 <!---PROBLEMA CON ESTE JQUERY OCULTA LA BARRA	
-	<script src="js/jquery-3.6.0.js"></script>
+	<script src="assets/js/jquery-3.6.0.js"></script>
 -->		<script src="js/mostrarOcultar.js"></script>
 
 </html>
