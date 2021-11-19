@@ -209,19 +209,7 @@
 								<li class="smooth-menu"><a href="#about">Estadisticas</a></li>							
 								<li class="smooth-menu"><a href="#project">Noticias</a></li>
 								<li class="smooth-menu"><a href="#test">Test</a></li>
-								<li>
-									<a href="#">
-										<span class="lnr lnr-cart"></span>
-									</a>
-								</li>
-								<li class="search">
-									<form action="">
-										<input type="text" name="search" placeholder="Search....">
-										<a href="#">
-											<span class="lnr lnr-magnifier"></span>
-										</a>
-									</form>
-								</li>
+								
 							</ul><!-- / ul -->
 						</div><!-- /.navbar-collapse -->
 					</nav><!--/nav -->
@@ -736,41 +724,7 @@
 							
 <div class="contenedor-deteccion">
                         <form class="contenedor-formulario" id="detection-form" name="detection-form" action="#" enctype="application/x-www-form-urlencoded" method="POST" onsubmit="return validate()">
-                            <div class="form-row">
-                                <div class="form-col col-100">
-                                    <label for="nombreapellido">Nombre y Apellido:</label>
-                                    <input class="form-input" type="text" id="nombreapellido" name="nombreapellido">
-                                    <div class="error-message">Campo Obligatorio</div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-col col-50">
-                                    <label for="dni">DNI</label>
-                                    <input class="form-input" type="text" id="dni" name="dni">
-                                    <div class="error-message">Campo Obligatorio</div>
-                                </div>
-                                <div class="form-col col-50">
-                                    <label for="telefono">Telefono</label>
-                                    <input class="form-input" type="tel" id="telefono" name="telefono">
-                                    <div class="error-message">Campo Obligatorio</div>
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-col col-50">
-                                    <label for="ciudad">Ciudad</label>
-                                    <input type="text" id="ciudad">
-                                    <div class="error-message">Campo Obligatorio</div>
-                                </div>
-                                <div class="form-col col-50">
-                                    <p>Sexo</p>
-                                    <div class="vertical-align-center">
-                                        <label for="masculino">M</label>
-                                        <input type="radio" id="masculino" name="genero" value="M"><label for="femenino">F</label>
-                                        <input type="radio" id="femenino" name="genero" value="f">
-                                        <div class="error-message">Campo obligatorio</div>
-                                    </div>
-                                </div>
+                            
                             </div>
                             <div class="form-row">
                                 <div class="form-col col-2">
@@ -1081,23 +1035,14 @@
                                     <p>¿Tuviste dificultad para respirar?</p>
                                 </div>
                                 <div class="form-col">
-                                    <input class="sickness-radio" type="radio" id="drespirar-si" name="drespirar" value="si" onclick="showAddress()">
+                                    <input class="sickness-radio" type="radio" id="drespirar-si" name="drespirar" value="si" >
                                     <label for="drespirar-si">Si</label>
-                                    <input class="sickness-radio" type="radio" id="drespirar-no" name="drespirar" value="no" onclick="showAddress()">
+                                    <input class="sickness-radio" type="radio" id="drespirar-no" name="drespirar" value="no" >
                                     <label for="drespirar-no">No</label>
                                     <div class="error-message">Campo Obligatorio</div>
                                 </div>
                             </div>
-                            <div class="form-row" id="address-container">
-                                <div class="form-col col-100">
-                                    <label for="direccion">Direccion:</label><input type="text" id="direccion" name="direccion">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-col col-100">
-                                    <label for="ciudad">Ciudad</label><input type="text" id="ciudad" name="ciudad">
-                                </div>
-                            </div>
+                            
                             <div class="form-row">
                                 <div class="form-col col-100">
                                     <input type="submit" value="enviar test" class="btn btn-view-detail alt-bg-color l-case">
@@ -1105,7 +1050,17 @@
                             </div>
                         </form>
                     </div>
-      </div>
+                    <div id="toastMessage">
+            				<div>Se estima que no es Covid. <span id="sickness-count"></span> síntomas de COVID-19
+                			fueron registrados</div>
+            				<i class="fa fa-check-circle"></i>
+        				</div>
+     				</div>
+     				<div id="toastMessageAlert">
+            				<div>Posible caso de covid. <span id="sickness-count2"></span> Se aconseja isoparse</div>
+            				<i class="fa fa-check-circle"></i>
+        				</div>
+     				</div>
 
     </div>
 
@@ -1192,13 +1147,11 @@
         <script type="text/javascript" src="assets/js/custom.js"></script>
 
         <!--Form JS-->
-        <script src="js/enfermedad-detalle.js"></script>
+        <script src="assets/js/enfermedad-detalle.js"></script>
 		
 
     </body>
-<!---PROBLEMA CON ESTE JQUERY OCULTA LA BARRA	
-	<script src="assets/js/jquery-3.6.0.js"></script>
--->		<script src="js/mostrarOcultar.js"></script>
+
 
 </html>
 

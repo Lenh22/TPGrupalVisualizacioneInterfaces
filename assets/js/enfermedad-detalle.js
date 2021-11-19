@@ -1,18 +1,3 @@
-function isEmptyField(fieldId) {
-    //Obtengo el elemento a validar
-    let element = document.getElementById(fieldId);
-    //Obtengo el div donde esta el mensaje de error
-    let errorMessage = element.parentElement.querySelector(".error-message");
-    //Limpio el error
-    errorMessage.style.display = "none";
-    if (element.value == '') {
-        //Si el campo esta vacio muestro el error y retorno true
-        errorMessage.style.display = "block";
-        return true;
-    }
-    return false;
-}
-
 function validateRadio(radioName) {
     let result = false;
 
@@ -48,43 +33,11 @@ function showCountries() {
     });
 }
 
-function showAddress() {
-    let radios = document.getElementsByName("drespirar");
-    radios.forEach(element => {
-        if (element.value == 'si' && element.checked) {
-            document.getElementById("address-container").style.display = "block";
-        }
-
-        if (element.value == 'no' && element.checked) {
-            document.getElementById("address-container").style.display = "none";
-        }
-    });
-}
 
 function validate() {
     let isValid = true;
 
     //Valido cada uno de los campos
-    if (isEmptyField("nombreapellido")) {
-        isValid = false;
-    }
-
-    if (isEmptyField("dni")) {
-        isValid = false;
-    }
-
-    if (isEmptyField("telefono")) {
-        isValid = false;
-    }
-
-    if (isEmptyField("ciudad")) {
-        isValid = false;
-    }
-
-    if (!validateRadio("genero")) {
-        isValid = false;
-    }
-
     if (!validateRadio("tos")) {
         isValid = false;
     }
@@ -130,8 +83,14 @@ function showMessage() {
     document.getElementById("sickness-count").innerHTML = sicknessCount;
 
     //Muestro el mensaje
-    var x = document.getElementById("toastMessage");
+    if(sicknessCount>3){
+        var x = document.getElementById("toastMessageAlert");
+        x.className = "show";
+    }else{
+        var x = document.getElementById("toastMessage");
     x.className = "show";
+    }
+
 
     //Despues de un tiempo lo escondo
     setTimeout(function () {

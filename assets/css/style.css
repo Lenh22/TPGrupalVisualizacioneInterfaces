@@ -2223,4 +2223,77 @@ a:active.learn-btn{
 	border-radius:50%;
 }
 
-/*========================Thank you=================
+/*========================Thank you=================*/
+
+
+
+
+#toastMessage {
+    display: none;
+    width: calc(100% - 4em);
+    padding: 2em;
+    position: relative;
+    top: 3.5em;
+    left: 0;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 10px;
+    background-color: rgb(131, 214, 129);
+    opacity: 0.95;
+}
+
+#toastMessage.show {
+    display: block;
+}
+
+
+#toastMessage i {
+    display: block;
+    font-size: 4em;
+    margin-top: 0.2em;
+}
+
+#closePopUp {
+    font-size: 2em;
+    color: #111;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+#country-container {
+	display: none;
+}
+
+#toastMessageAlert {
+    display: none;
+    width: calc(100% - 4em);
+    padding: 2em;
+    position: relative;
+    top: 3.5em;
+    left: 0;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 10px;
+    background-color: rgb(300,50,80);
+    opacity: 0.95;
+    color: white;
+}
+
+#toastMessageAlert.show {
+    display: block;
+}
+
+
+#toastMessageAlert i {
+    display: block;
+    font-size: 4em;
+    margin-top: 0.2em;
+}
+
+.error-message {
+	color: red;
+	display: none;
+}
+
