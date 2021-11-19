@@ -7,9 +7,28 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		
-		
 
+
+<!------------------Links de Gustavo-------------------->
+<!---		<link rel="stylesheet" href="css/formStyles.css" />
+		<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+		integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+		crossorigin="anonymous"
+		/>
+		<script
+		src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"
+		></script>
+		<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+		crossorigin="anonymous"
+		></script>
+
+<!------------------------------------------------------->
         <!--font-family-->
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
 		
@@ -737,9 +756,691 @@
 					</div><!--/.section-header-->
 					<div class="pricing-content">
 						<div class="row">
+<!--------------------------------form de Gusta------------------------------------------------------------------------->
 							
-							Aca iria el form
+<h2>Test</h2>
 
+    <div class="jumbotron" id="jumbotron">
+      <h1 class="display-4">Hola, bienvenido</h1>
+      <p class="lead">
+        ¿Quiéres completar el test para evaluar si existe la posibilidad de que
+        seas un caso sospechoso de covid?
+      </p>
+      <hr class="my-4" />
+      <p>
+        En caso de que así sea, haz click en el botón aquí debajo y completalo a
+        conciencia.
+      </p>
+      <a class="btn btn-primary btn-lg" href="#formUsuario" role="button" onclick="muestra_oculta('jumbotron')">Empecemos</a>
+    </div>
+
+    <div class="container">
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-toggle="modal"
+        data-target="#staticBackdrop"
+      >
+        Launch static backdrop modal
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-backdrop="static"
+        data-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">...</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-dismiss="modal"
+              >
+                Understood
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <!--Fin modal-->
+
+      <div class="row">
+        <div class="col">
+
+          <br />
+          <h3>Acá irán los formularios</h3>
+          <br />
+
+          <div id="esconderFormUsuario">
+          <form class="needs-validation formUsuario" id="formUsuario" novalidate>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="validationCustom01">Nombre</label>
+                <input
+                  type="text"
+                  name="nombre _replyto"
+                  class="form-control"
+                  id="validationCustom01 nombre"
+                  placeholder="Ingrese su nombre..."
+                  minlength="3"
+                  maxlength="40"
+                  required
+                />
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Ingrese su nombre.</div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="validationCustom02">Apellido</label>
+                <input
+                  type="text"
+                  name="apellido"
+                  class="form-control"
+                  id="validationCustom02"
+                  placeholder="Ingrese su apellido..."
+                  minlength="2"
+                  maxlength="50"
+                  required
+                />
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Ingrese su apellido.</div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="validationCustom03">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  id="validationCustom03"
+                  placeholder="ejemplo@email.com"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Please provide a valid Email.
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="validationCustom04">Provincia</label>
+                <select class="custom-select" id="validationCustom04" required>
+                  <option selected disabled value="">Choose...</option>
+                  <option value="Buenos Aires">Buenos Aires</option>
+                  <option value="CABA">CABA</option>
+                  <option value="Catamarca">Catamarca</option>
+                  <option value="Chaco">Chaco</option>
+                  <option value="Chubut">Chubut</option>
+                  <option value="Córdoba">Córdoba</option>
+                  <option value="Corrientes">Corrientes</option>
+                  <option value="Entre Ríos">Entre Ríos</option>
+                  <option value="Formosa">Formosa</option>
+                  <option value="Jujuy">Jujuy</option>
+                  <option value="La Pampa">La Pampa</option>
+                  <option value="La Rioja">La Rioja</option>
+                  <option value="Mendoza">Mendoza</option>
+                  <option value="Misiones">Misiones</option>
+                  <option value="Neuquén">Neuquén</option>
+                  <option value="Río Negro">Río Negro</option>
+                  <option value="Salta">Salta</option>
+                  <option value="San Juan">San Juan</option>
+                  <option value="San Luis">San Luis</option>
+                  <option value="Santa Cruz">Santa Cruz</option>
+                  <option value="Santa Fe">Santa Fe</option>
+                  <option value="Santiago del Estero">
+                    Santiago del Estero
+                  </option>
+                  <option value="Tierra del Fuego">Tierra del Fuego</option>
+                  <option value="Tucuman">Tucumán</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid Provincia.
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="validationCustom05">Género</label>
+                <select class="form-control" id="validationCustom05" required>
+                  <option selected disabled value="">Choose...</option>
+                  <option value="Femenino">Femenino</option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Ambos">Ambos</option>
+                  <option value="No Binario">No Binario</option>
+                  <option value="Otro">Otro</option>
+                  <option value="Ninguno">Ninguno</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a valid Gender.
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="invalidCheck"
+                  required
+                />
+                <label class="form-check-label" for="invalidCheck">
+                  Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                  You must agree before submitting.
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit" onclick="verificarYocultarForm('formUsuario')" >Enviar</button>
+          </form>
+        </div>
+
+          <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+              "use strict";
+              window.addEventListener(
+                "load",
+                function () {
+                  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                  var forms =
+                    document.getElementsByClassName("needs-validation");
+                  // Loop over them and prevent submission
+                  var validation = Array.prototype.filter.call(
+                    forms,
+                    function (form) {
+                      form.addEventListener(
+                        "submit",
+                        function (event) {
+                          if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                          }
+                          form.classList.add("was-validated");
+                        },
+                        false
+                      );
+                    }
+                  );
+                },
+                false
+              );
+            })();
+          </script>
+          
+          <br />
+
+          <br />
+          <h3>Test De Covid</h3>
+          <br />
+
+          <div class="progress">
+            <div
+              id="progressBar"
+              class="progress-bar progress-bar-striped progress-bar-animated"
+              role="progressbar"
+              aria-valuenow="75"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              style="width: 9%"
+            ></div>
+          </div>
+          <br />
+
+          <!--Barra de progreso del form-->
+
+          <form id="formCovid">
+
+            <div class="card" id="card1" style= "display: block;">
+            
+              <div class="card-body">
+                <label for="" class="card-title"
+                  >¿ Percibiste una marcada pérdida del olfato ?</label
+                >
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    id="customRadio1"
+                    name="customRadio1"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="customRadio1"
+                    >Si</label
+                  >
+                </div>
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    id="customRadio2"
+                    name="customRadio1"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="customRadio2"
+                    >No</label
+                  >
+                </div>
+                <br />
+                <a href="#" class="card-link siguiente" onclick="muestra_oculta('card1')"
+                title="">Siguiente</a>
+              </div>
+            </div>
+
+            <br />
+
+            <div class="card" id="card2" >
+              <div class="card-body">
+                <label for="" class="card-title"
+                  >¿ Percibiste una marcada pérdida del gusto ?</label
+                >
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    id="customRadio3"
+                    name="customRadio2"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="customRadio3"
+                    >Si</label
+                  >
+                </div>
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    id="customRadio4"
+                    name="customRadio2"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="customRadio4"
+                    >No</label
+                  >
+                </div>
+                <br />
+                <a href="#" class="card-link anterior" onclick="muestra_oculta('card1')"
+                title="">Anterior</a>
+                <a href="#" class="card-link siguiente" onclick="muestra_oculta('card2')"
+                title="">Siguiente</a>
+              </div>
+            </div>
+
+            <br />
+
+            <div class="card" id="card3" >
+              <div class="card-body">
+                <label for="" class="card-title">¿ Tenés fiebre ?</label>
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    id="customRadio5"
+                    name="customRadio3"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="customRadio5"
+                    >Si</label
+                  >
+                </div>
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    id="customRadio6"
+                    name="customRadio3"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="customRadio6"
+                    >No</label
+                  >
+                </div>
+                <br />
+                <a href="#" class="card-link anterior" onclick="muestra_oculta('card2')"
+                title="">Anterior</a>
+                <a href="#" class="card-link siguiente" onclick="muestra_oculta('card3')"
+                title="">Siguiente</a>
+              </div>
+            </div>
+
+            <br />
+
+            <div class="card" id="card4" >
+              <div class="card-body">
+                <label for="" class="card-title">¿ Tenés tos ?</label>
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    id="customRadio7"
+                    name="customRadio4"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="customRadio7"
+                    >Si</label
+                  >
+                </div>
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    id="customRadio8"
+                    name="customRadio4"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="customRadio8"
+                    >No</label
+                  >
+                </div>
+                <br />
+                <a href="#" class="card-link anterior" onclick="muestra_oculta('card3')"
+                title="">Anterior</a>
+                <a href="#" class="card-link siguiente" onclick="muestra_oculta('card4')"
+                title="">Siguiente</a>
+              </div>
+            </div>
+
+            <br />
+
+            <div class="card" id="card5" >
+              <div class="card-body">
+                <label for="" class="card-title"
+                  >¿ Tenés dolor de garganta ?</label
+                >
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    id="customRadio9"
+                    name="customRadio5"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="customRadio9"
+                    >Si</label
+                  >
+                </div>
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    id="customRadio10"
+                    name="customRadio5"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="customRadio10"
+                    >No</label
+                  >
+                </div>
+                <br />
+                <a href="#" class="card-link anterior" onclick="muestra_oculta('card4')"
+                title="">Anterior</a>
+                <a href="#" class="card-link siguiente" onclick="muestra_oculta('card5')"
+                title="">Siguiente</a>
+              </div>
+            </div>
+
+            <br />
+
+            <div class="card" id="card6" >
+              <div class="card-body">
+                <label for="" class="card-title"
+                  >¿ Tenés dificultad para respirar ?</label
+                >
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    id="customRadio11"
+                    name="customRadio6"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="customRadio11"
+                    >Si</label
+                  >
+                </div>
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    id="customRadio12"
+                    name="customRadio6"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="customRadio12"
+                    >No</label
+                  >
+                </div>
+                <br />
+                <a href="#" class="card-link anterior" onclick="muestra_oculta('card5')"
+                title="">Anterior</a>
+                <a href="#" class="card-link siguiente" onclick="muestra_oculta('card6')"
+                title="">Siguiente</a>
+              </div>
+            </div>
+
+            <br />
+
+            <div class="card" id="card7" >
+              <div class="card-body">
+                <label for="" class="card-title">¿ Tenés diarrea ?</label>
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    id="customRadio13"
+                    name="customRadio7"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="customRadio13"
+                    >Si</label
+                  >
+                </div>
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    id="customRadio14"
+                    name="customRadio7"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="customRadio14"
+                    >No</label
+                  >
+                </div>
+                <br />
+                <a href="#" class="card-link" onclick="muestra_oculta('card6')"
+                title="">Anterior</a>
+                <a href="#" class="card-link" onclick="muestra_oculta('card7')"
+                title="">Siguiente</a>
+              </div>
+            </div>
+
+            <br />
+
+            <div class="card" id="card8" >
+              <div class="card-body">
+                <label for="" class="card-title"
+                  >¿ Tenés dolor de cabeza ?</label
+                >
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    id="customRadio15"
+                    name="customRadio8"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="customRadio15"
+                    >Si</label
+                  >
+                </div>
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    id="customRadio16"
+                    name="customRadio8"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="customRadio16"
+                    >No</label
+                  >
+                </div>
+                <br />
+                <a href="#" class="card-link" onclick="muestra_oculta('card7')"
+                title="">Anterior</a>
+                <a href="#" class="card-link" onclick="muestra_oculta('card8')"
+                title="">Siguiente</a>
+              </div>
+            </div>
+
+            <br />
+
+            <div class="card" id="card9" >
+              <div class="card-body">
+                <label for="" class="card-title"
+                  >¿ Tenés dolores musculares y/o articulares ?</label
+                >
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    id="customRadio17"
+                    name="customRadio9"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="customRadio17"
+                    >Si</label
+                  >
+                </div>
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    id="customRadio18"
+                    name="customRadio9"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="customRadio18"
+                    >No</label
+                  >
+                </div>
+                <br />
+                <a href="#" class="card-link" onclick="muestra_oculta('card8')"
+                title="">Anterior</a>
+                <a href="#" class="card-link" onclick="muestra_oculta('card9')"
+                title="">Siguiente</a>
+              </div>
+            </div>
+
+            <br />
+
+            <div class="card" id="card10" >
+              <div class="card-body">
+                <label for="" class="card-title"
+                  >¿ Estuviste en contacto con un caso confirmado o sospechoso
+                  de covid en los últimos 7 días ?</label
+                >
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    id="customRadio19"
+                    name="customRadio10"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="customRadio19"
+                    >Si</label
+                  >
+                </div>
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    id="customRadio20"
+                    name="customRadio10"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="customRadio20"
+                    >No</label
+                  >
+                </div>
+                <br />
+                <a href="#" class="card-link" onclick="muestra_oculta('card9')"
+                title="">Anterior</a>
+                <a href="#" class="card-link" onclick="muestra_oculta('card10')"
+                title="">Siguiente</a>
+              </div>
+            </div>
+
+            <br />
+
+            <div class="card" id="card11" >
+              <div class="card-body">
+                <label for="exampleFormControlSelect1" class="card-title"
+                  >¿ Cuántos días llevás con estos síntomas ?</label
+                >
+                <select
+                  class="form-control card-text"
+                  id="exampleFormControlSelect1"
+                  required
+                >
+                  <option value="Desde hoy">Desde hoy</option>
+                  <option value="Desde ayer">Desde ayer</option>
+                  <option value="Empezaron hace 2 dias">Empezaron hace 2 días</option>
+                  <option value="Empezaron hace 3 dias">Empezaron hace 3 días</option>
+                  <option value="Mas de 2 dias">Más de 3 días</option>
+                </select>
+                <br />
+                <a href="#" class="card-link" onclick="muestra_oculta('card10')"
+                title=""
+                >Anterior</a>
+              </div>
+            </div>
+
+            <br />
+
+            <button type="submit" class="btn btn-primary formCov" onclick="processData()" href="#">Enviar</button>
+
+            <script>
+              // Variable to hold request
+              var data = [];
+              $("#dataForm").submit(function(event) {
+                  event.preventDefault();
+                  data.push($(this).find('input[name="data"]').val());
+                  var a = [];
+                  a = document.getElementById("#card11").value; 
+                  alert("Dato Añadida");
+              });
+          
+              function processData() {
+                  alert(a);
+              }
+          </script>
+
+            <br />
+          </form>
+
+
+          <br />
+        </div>
+
+        <div class="col">
+          <br />
+          <h3>Acá la info y dibujos</h3>
+          <br />
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+<!--------------------------------------------------------------------------------------------------------->
 						</div><!--/.row-->
 					</div><!--/.pricing-content-->
 				</div><!--/.pricing-details-->
@@ -909,7 +1610,10 @@
 		
 
     </body>
-	
+<!---PROBLEMA CON ESTE JQUERY OCULTA LA BARRA	
+	<script src="js/jquery-3.6.0.js"></script>
+-->		<script src="js/mostrarOcultar.js"></script>
+
 </html>
 
 
