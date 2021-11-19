@@ -19,7 +19,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 		
         <!-- TITLE OF SITE -->
-        <title>Zombiz</title>
+        <title>CovPlus 19</title>
 
         <!-- for title img -->
 		<link rel="shortcut icon" type="image/icon" href="assets/images/logo/favicon.png"/>
@@ -341,7 +341,7 @@
 											</div><!--/.we-do-img-->
 											<div class="we-do-topics">
 												<h2>
-													<a href="#">
+													<a>
 														Tos
 													</a>
 												</h2>
@@ -736,18 +736,18 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-col col-2">
-                                    <p>¿viajaste al exterior de la Republica Argentina?</p>
+                                    <p class="indica-sintomas">¿Viajaste al exterior de la Republica Argentina?</p>
                                 </div>
-                                <div class="form-col col-2">
+                                <div class="form-col col-2 indica-sintomas2">
                                     <input type="radio" id="viajo-si" name="realizo-viaje" value="si" onclick="showCountries()">
                                     <label for="viajo-si">Si</label>
                                     <input type="radio" id="viajo-no" name="realizo-viaje" value="no" onclick="showCountries()">
                                     <label for="viajo-no">No</label>
                                 </div>
                             </div>
-                            <div class="form-row" id="country-container">
-                                <div class="form-col col-100">
-                                    <label for="pais">Pais visitados</label>
+                            <div class="form-row indica-sintoma3" id="country-container">
+                                <div class="form-col col-100" style="text-align: center;">
+                                    <label for="pais" style="color: dimgray; font-family: 'Poppins';">Pais visitado</label>
                                     <select name="pais" id="pais">
                                         <option value="">Ingrese el pais que visitó</option>
                                         <option value="AF">Afganistán</option>
@@ -989,14 +989,14 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-col col-100">
-                                    <p class="indica-sintomas">Por favor, indica los sintomas que presentas:</p>
+                                    <p class="indica-sintomas2">Por favor, indica los sintomas que presentas:</p>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-col">
-                                    <p>¿Tuviste Fiebre mayor a 38 grados?</p>
+                                    <p class="indica-sintomas">¿Tuviste Fiebre mayor a 38 grados?</p>
                                 </div>
-                                <div class="form-col">
+                                <div class="form-col indica-sintomas2">
                                     <input class="sickness-radio" type="radio" id="fiebre-si" name="fiebre" value="si">
                                     <label for="fiebre-si">Si</label>
                                     <input class="sickness-radio" type="radio" id="fiebre-no" name="fiebre" value="no">
@@ -1006,9 +1006,9 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-col">
-                                    <p>¿Tuviste dolor de cabeza?</p>
+                                    <p class="indica-sintomas">¿Tuviste dolor de cabeza?</p>
                                 </div>
-                                <div class="form-col">
+                                <div class="form-col indica-sintomas2">
                                     <input class="sickness-radio" type="radio" id="dcabeza-si" name="dolordecabeza" value="si"><label for="dcabeza-si">Si</label>
                                     <input class="sickness-radio" type="radio" id="dcabeza-no" name="dolordecabeza" value="no">
                                     <label for="dcabeza-no">No</label>
@@ -1017,9 +1017,9 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-col">
-                                    <p>¿Tuviste una tos persistente?</p>
+                                    <p class="indica-sintomas">¿Tuviste una tos persistente?</p>
                                 </div>
-                                <div class="form-col">
+                                <div class="form-col indica-sintomas2">
                                     <input class="sickness-radio" type="radio" id="tos-si" name="tos" value="si">
                                     <label for="tos-si">Si</label>
                                     <input class="sickness-radio" type="radio" id="tos-no" name="tos" value="no">
@@ -1029,9 +1029,9 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-col">
-                                    <p>¿Tuviste dolor de garganta?</p>
+                                    <p class="indica-sintomas">¿Tuviste dolor de garganta?</p>
                                 </div>
-                                <div class="form-col">
+                                <div class="form-col indica-sintomas2">
                                     <input class="sickness-radio" type="radio" id="dgarganta-si" name="dgarganta" value="si"><label for="dgarganta-si">Si</label>
                                     <input class="sickness-radio" type="radio" id="dgarganta-no" name="dgarganta" value="no">
                                     <label for="dgarganta-no">No</label>
@@ -1040,9 +1040,9 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-col">
-                                    <p>¿Tuviste dificultad para respirar?</p>
+                                    <p class="indica-sintomas">¿Tuviste dificultad para respirar?</p>
                                 </div>
-                                <div class="form-col">
+                                <div class="form-col indica-sintomas2">
                                     <input class="sickness-radio" type="radio" id="drespirar-si" name="drespirar" value="si" >
                                     <label for="drespirar-si">Si</label>
                                     <input class="sickness-radio" type="radio" id="drespirar-no" name="drespirar" value="no" >
@@ -1052,8 +1052,8 @@
                             </div>
                             
                             <div class="form-row">
-                                <div class="form-col col-100">
-                                    <input type="submit" value="enviar test" class="btn btn-view-detail alt-bg-color l-case">
+                                <div class="form-col col-100 indica-sintomas2">
+                                    <input type="submit" value="Enviar test" class="btn btn-view-detail alt-bg-color l-case">
                                 </div>
                             </div>
                         </form>

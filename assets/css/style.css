@@ -1951,6 +1951,40 @@ a:active.learn-btn{
 #porDia{
 	color: #dfdfdf;
 }
+.indica-sintomas{
+	color: #888;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 32px;
+    line-height: 1.8;
+	text-align: center;
+
+}
+.indica-sintomas2{
+	color: rgb(136, 74, 74);
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 32px;
+    line-height: 1.8;
+	text-align: center;	
+}
+.indica-sintomas3{
+	color: #888;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 32px;
+    line-height: 1.8;	
+}
+#toastMessageAlert{
+	align-items: center;
+}
+
 /*-blog button-*/\
 
 /*pagination*/
