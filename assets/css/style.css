@@ -1715,6 +1715,7 @@ a:active.learn-btn{
 	color:#8b8b8b;
 	font-size:16px;
 	font-family: 'Poppins', sans-serif;
+	justify-content: center;
 }
 /* foot-menu  */
 .foot-menu ul li {
