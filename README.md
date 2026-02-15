@@ -122,7 +122,7 @@ Luego abre en el navegador: `http://localhost:8000`
 
 El proyecto está configurado para desplegarse automáticamente en GitHub Pages. El sitio estará disponible en:
 
-`https://<usuario>.github.io/TPGrupalVisualizacioneInterfaces/`
+`https://Lenh22.github.io/TPGrupalVisualizacioneInterfaces/`
 
 ---
 
